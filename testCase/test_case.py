@@ -2,8 +2,8 @@
 #-*-coding:utf-8-*-
 #Date:2019/12/29 0029  15:22
 #Author:chao
-import unittest
-from ddt import ddt,data,unpack,file_data
+import unittest,json
+from ddt import ddt,data,unpack
 from common.readExcel import readExcel
 from common.configHttp import configHttp
 '''
@@ -23,9 +23,18 @@ class myTestCase(unittest.TestCase):
     @unpack
     def send_request(self,id,url,name,method,param,expect):
         print(id,url,name,method,param,expect)
+        print(type(eval(param)))
         c = configHttp()
-        request = c.requests(url,method,param)
+        result = c.requests(url,method,param)
         print("接口请求完成")
+        real = str(json.loads(result)['errorCode'])
+        try:
+            status = self.assertEqual(real, expect)
+            print('返回结果', status)
+            # status = None
+        except AssertionError as msg:
+            print(msg)
+            status = 'Error'
 if __name__ == '__main__':
     r = myTestCase()
     r.send_request(*test_data)
