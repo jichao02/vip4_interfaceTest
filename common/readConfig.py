@@ -2,6 +2,12 @@
 #-*-coding:utf-8-*-
 #Date:2020/1/1 0001  20:36
 #Author:chao
+'''
+1、导入包
+2、创建对象
+3、读取内容
+4、关闭
+'''
 import os
 import configparser
 # 取上一层目录
@@ -10,7 +16,7 @@ path = os.path.dirname(__file__)
 path = os.path.dirname(path)
 print(path)
 # 拼接要读取的目录
-new_path = os.path.join(path,"configHttp.ini")
+new_path = os.path.join(path,"config.ini")
 print(new_path)
 class readConfig(object):
     def __init__(self):

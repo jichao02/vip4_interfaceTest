@@ -36,9 +36,9 @@ class readExcel(object):
             new_url.append(paramList[i][1:])
             new_url.append(assertList[i][1:])
             dataList.append(new_url)
+        # 7、return给需要数据的地方
         return dataList
-# 7、return给需要数据的地方
 
 if __name__ == '__main__':
     getdata = readExcel()
-    getdata.getRequests()
+    print(getdata.getRequests())
