@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2020-01-11 18:47:58</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.001001</p>
-<p class='attribute'><strong>Status:</strong> Failure 1 Error 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2020-01-11 20:12:11</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.165074</p>
+<p class='attribute'><strong>Status:</strong> Error 1</p>
 
 <p class='description'>测试报告描述</p>
 </div>
@@ -221,22 +221,22 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='failClass'>
-    <td>testMyfun.testMyfun</td>
+<tr class='errorClass'>
+    <td>unittest.loader._FailedTest</td>
     <td>1</td>
     <td>0</td>
-    <td>1</td>
     <td>0</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
 <tr id='ft1.1' class='none'>
-    <td class='failCase'><div class='testcase'>test_divide</div></td>
+    <td class='errorCase'><div class='testcase'>test_case</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        fail</a>
+        error</a>
 
     <div id='div_ft1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
@@ -245,48 +245,7 @@ function showOutput(id, name) {
         </div>
         <pre>
         
-ft1.1: Traceback (most recent call last):
-  File "E:\2020.1.1\vip4_interfaceTest\testCase\testMyfun.py", line 10, in test_divide
-    self.assertEqual(1,result)
-AssertionError: 1 != 2.0
-Traceback (most recent call last):
-  File "E:\2020.1.1\vip4_interfaceTest\testCase\testMyfun.py", line 10, in test_divide
-    self.assertEqual(1,result)
-AssertionError: 1 != 2.0
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr class='errorClass'>
-    <td>unittest.loader._FailedTest</td>
-    <td>1</td>
-    <td>0</td>
-    <td>0</td>
-    <td>1</td>
-    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
-</tr>
-
-<tr id='ft2.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_case</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
-        error</a>
-
-    <div id='div_ft2.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.1: ImportError: Failed to import test module: test_case
+ft1.1: ImportError: Failed to import test module: test_case
 Traceback (most recent call last):
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\loader.py", line 436, in _find_test_path
     module = self._get_module_from_name(name)
@@ -329,9 +288,9 @@ FileNotFoundError: [Errno 2] No such file or directory: '../testData/data.xls'
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>2</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td>1</td>
     <td>&nbsp;</td>
 </tr>

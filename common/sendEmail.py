@@ -21,12 +21,27 @@ class sendEmail(object):
     sender = r.getEmail("sender")
     receiver = r.getEmail("receiver")
     content = r.getEmail("content")
+    msg = MIMEMultipart()
     # t = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    # 配置附件属性
+    def config_mail(self):
+        send_file = self.find_file()
+        send_file = open(send_file, 'rb').read()
+        # 组装邮件内容和标题，中文需参数’utf-8‘，单字节字符不需要
+        att = MIMEText(send_file, 'plain', 'utf-8')
+        att["Content-Type"] = 'application/octet-stream'
+        att["Content-Disposition"] = 'attachment; filename="report.html"'
+        self.msg.attach(att)
+        self.msg['From'] = self.sender
+        self.msg['To'] = self.receiver
+        # self.msg['Subject'] = '自动化测试结果-----' + t
+        self.msg['Subject'] = Header('Python自动化测试报告', 'utf-8')
+        self.msg.attach(MIMEText('这是接口自动化报告邮件，如果想查看详情请查收附件', 'plain', 'utf-8'))
     # 查找目录下的最新文件
     def find_file(self):
         current_path = os.path.dirname(os.path.abspath(__file__))
         # 获取报告的存放路径
-        report_path = os.path.dirname(current_path) + "/" + 'testReport'
+        report_path = os.path.dirname(current_path) + "\\" + 'testReport'
         # 获取存放路径下的全部文件名称的列表
         file_list = os.listdir(report_path)
         fileDict = {}
@@ -44,42 +59,27 @@ class sendEmail(object):
         # 拼接最新文件的路径
         send_file = report_path + "/" + sendfile
         return sendfile
-    # 配置邮件属性
-    def config_mail(self):
-        send_file = self.find_file()
-        send_file = open(send_file,'rb').read()
-        # 组装邮件内容和标题，中文需参数’utf-8‘，单字节字符不需要
-        self.msg = MIMEText(send_file, _subtype='html', _charset='utf-8')
-        self.msg['From'] = self.sender
-        self.msg['To'] = self.receiver
-        # 添加附件
-        # att = MIMEText(send_file,'plain','utf-8')
-        # att["Content-Type"] = 'application/octet-stream'
-        # att["Content-Disposition"] = 'attachment; filename="report.html"'
-        # self.msg.attach(att)
-        # self.msg['Subject'] = '自动化测试结果-----' + t
-        self.msg['Subject'] = Header('Python自动化测试报告','utf-8')
-        self.msg.attach(MIMEText('这是接口自动化报告邮件，如果想查看详情请查收附件', 'plain', 'utf-8'))
+
     # 发送邮件
     def send_email(self):
         self.config_mail()
         # 登录并发送邮件
-        # try:
-        # 实例化smtp对象
-        smtp = smtplib.SMTP()
-        # 链接smtp服务器
-        smtp.connect(self.mail_host,self.mail_port)
-        # 登录
-        smtp.login(self.mail_user,self.mail_pass)
-        # 发送邮件
-        smtp.sendmail(self.sender,self.receiver,self.msg.as_string())
-        print("邮件发送成功")
-        # except smtplib.SMTPException as msg:
-        #     print("邮件发送失败")
+        try:
+            # 实例化smtp对象
+            s = smtplib.SMTP()
+            # 链接smtp服务器
+            s.connect(self.mail_host,self.mail_port)
+            # 登录
+            s.login(self.mail_user,self.mail_pass)
+            # 发送邮件
+            s.sendmail(self.sender,self.receiver,self.msg.as_string())
+            print("邮件发送成功")
+        except smtplib.SMTPException as msg:
+            print("邮件发送失败")
 
 # if __name__ == '__main__':
-s = sendEmail()
-s.send_email()
+# #     s = sendEmail()
+# #     s.send_email()
 
 
 

@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0ab102b-892b-412a-be1f-c6fe617bc3f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/logs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/sendEmail.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/path.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/sendEmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/sendEmail.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testData/data.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testData/data.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testReport/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testReport/test.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sendEmail">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="vip4_interfaceTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,10 +160,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sendEmail" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.path" />
         <item itemvalue="Python.test_case" />
+        <item itemvalue="Python.sendEmail" />
+        <item itemvalue="Python.path" />
         <item itemvalue="Python.readExcel" />
       </list>
     </recent_temporary>
