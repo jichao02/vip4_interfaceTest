@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0ab102b-892b-412a-be1f-c6fe617bc3f7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common/logs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/sendEmail.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/path.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/configHttp.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/configHttp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/readConfigHttp.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/readConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/readExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/readExcel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/writeExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/writeExcel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configHttp.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testCase/test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/test_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testData/data.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testData/data.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +51,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_case">
-    <configuration name="configHttp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.sendEmail">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="vip4_interfaceTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -62,11 +60,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/configHttp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -75,7 +73,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="readConfigHttp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="path" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="vip4_interfaceTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,11 +81,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="E:\2020.1.1\vip4_interfaceTest\common\readConfig.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/path.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -117,6 +115,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sendEmail" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="vip4_interfaceTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/sendEmail.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_case" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="vip4_interfaceTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,34 +157,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="writeExcel" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="vip4_interfaceTest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/writeExcel.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sendEmail" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.path" />
         <item itemvalue="Python.test_case" />
         <item itemvalue="Python.readExcel" />
-        <item itemvalue="Python.writeExcel" />
-        <item itemvalue="Python.readConfigHttp" />
-        <item itemvalue="Python.configHttp" />
       </list>
     </recent_temporary>
   </component>
